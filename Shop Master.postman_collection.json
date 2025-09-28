@@ -1,0 +1,2330 @@
+{
+	"info": {
+		"_postman_id": "fa7a13fc-0db1-4bd2-bb59-4ad783c19c62",
+		"name": "Shop Master",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20479914",
+		"_collection_link": "https://blue-sunset-680232.postman.co/workspace/flintf~cb648713-d604-4fcb-a7fc-376af37478e3/collection/20479914-fa7a13fc-0db1-4bd2-bb59-4ad783c19c62?action=share&source=collection_link&creator=20479914"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Business",
+					"item": [
+						{
+							"name": "Get Business By Owner",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+							},
+							"response": [
+								{
+									"name": "Get Business By Owner",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"contact\": [\r\n                {\r\n                    \"name\": \"Customer Care\",\r\n                    \"value\": \"+2348012345678\"\r\n                },\r\n                {\r\n                    \"name\": \"Instagram\",\r\n                    \"value\": \"@bellchow.id.ng\"\r\n                }\r\n            ], \r\n            \"name\": \"FuseLabs.IO Dev\",\r\n            \"yearOfEstablishment\": 2024\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1266"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4f2-tRJ+1lZUsGzfv74SUY19arXUR20\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 09:35:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"business\": {\n            \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"name\": \"FuseLabs.IO\",\n            \"yearOfEstablishment\": 2025,\n            \"category\": \"Software Development\",\n            \"description\": \"Curating advanced and improved Software for Organizations\",\n            \"address\": \"9 Maitama Crescent, Abuja\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Customer Care\",\n                    \"value\": \"+2348012345678\"\n                }\n            ],\n            \"imageUrl\": \"https://example.com/images/artify.jpg\",\n            \"nextSubRenewal\": null,\n            \"activeSubStatus\": false,\n            \"status\": \"active\",\n            \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n            \"updatedAt\": \"2025-07-11T21:00:07.775Z\",\n            \"owner\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-14T09:35:47.787Z\",\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-14T08:35:47.526Z\"\n            },\n            \"subscription\": null,\n            \"outlets\": [],\n            \"users\": [\n                {\n                    \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                    \"firstName\": \"Ibrahim\",\n                    \"lastName\": \"Sulayman\",\n                    \"email\": \"ibrahimsulayman55@gmail.com\",\n                    \"phone\": \"+2348130388321\",\n                    \"userType\": \"owner\",\n                    \"password\": \"\",\n                    \"status\": \"active\",\n                    \"lastLogin\": \"2025-07-14T09:35:47.787Z\",\n                    \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                    \"updatedAt\": \"2025-07-14T08:35:47.526Z\"\n                }\n            ]\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Business By Owner",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contact\": [\r\n        {\r\n            \"name\": \"Customer Care\",\r\n            \"value\": \"+2348012345678\"\r\n        },\r\n        {\r\n            \"name\": \"Instagram\",\r\n            \"value\": \"@bellchow.id.ng\"\r\n        }\r\n    ],\r\n    \"name\": \"FuseLabs.IO Dev\",\r\n    \"yearOfEstablishment\": 2024\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+							},
+							"response": [
+								{
+									"name": "Update Business By Owner",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"contact\": [\r\n        {\r\n            \"name\": \"Customer Care\",\r\n            \"value\": \"+2348012345678\"\r\n        },\r\n        {\r\n            \"name\": \"Instagram\",\r\n            \"value\": \"@bellchow.id.ng\"\r\n        }\r\n    ],\r\n    \"name\": \"FuseLabs.IO Dev\",\r\n    \"yearOfEstablishment\": 2024\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "695"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2b7-wcxgl7f6m9XUlg7s1J/ykm4O/nE\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 09:42:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"business\": {\n            \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"name\": \"FuseLabs.IO Dev\",\n            \"yearOfEstablishment\": 2024,\n            \"category\": \"Software Development\",\n            \"description\": \"Curating advanced and improved Software for Organizations\",\n            \"address\": \"9 Maitama Crescent, Abuja\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Customer Care\",\n                    \"value\": \"+2348012345678\"\n                },\n                {\n                    \"name\": \"Instagram\",\n                    \"value\": \"@bellchow.id.ng\"\n                }\n            ],\n            \"imageUrl\": \"https://example.com/images/artify.jpg\",\n            \"nextSubRenewal\": null,\n            \"activeSubStatus\": false,\n            \"status\": \"active\",\n            \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"subscriptionId\": null,\n            \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n            \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Outlet",
+					"item": [
+						{
+							"name": "Create Outlet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Central Hub\",\r\n  \"address\": \"555 Central Ave, Downtown\",\r\n  \"phone\": \"+1122334455\",\r\n  \"email\": \"central@hubstore.com\",\r\n  \"contact\": [\r\n    { \"name\": \"Sales Manager\", \"value\": \"Jane Smith\" },\r\n    { \"name\": \"Support Email\", \"value\": \"support@hubstore.com\" },\r\n    { \"name\": \"Emergency Line\", \"value\": \"+6677889900\" }\r\n  ],\r\n  \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\r\n  \"description\": \"The flagship store serving central customers.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/outlets/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd/outlets"
+							},
+							"response": [
+								{
+									"name": "Create Outlet",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Central Hub\",\r\n  \"address\": \"555 Central Ave, Downtown\",\r\n  \"phone\": \"+1122334455\",\r\n  \"email\": \"central@hubstore.com\",\r\n  \"contact\": [\r\n    { \"name\": \"Sales Manager\", \"value\": \"Jane Smith\" },\r\n    { \"name\": \"Support Email\", \"value\": \"support@hubstore.com\" },\r\n    { \"name\": \"Emergency Line\", \"value\": \"+6677889900\" }\r\n  ],\r\n  \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\r\n  \"description\": \"The flagship store serving central customers.\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/outlets/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd/outlets"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1295"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"50f-2GXXe/CZJS1hwaCKtf9E9smp990\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 09:52:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"outlet\": {\n            \"name\": \"Central Hub\",\n            \"address\": \"555 Central Ave, Downtown\",\n            \"phone\": \"+1122334455\",\n            \"email\": \"central@hubstore.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Sales Manager\",\n                    \"value\": \"Jane Smith\"\n                },\n                {\n                    \"name\": \"Support Email\",\n                    \"value\": \"support@hubstore.com\"\n                },\n                {\n                    \"name\": \"Emergency Line\",\n                    \"value\": \"+6677889900\"\n                }\n            ],\n            \"status\": \"active\",\n            \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n            \"description\": \"The flagship store serving central customers.\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n            \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Outlets By Business",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/outlets/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+							},
+							"response": [
+								{
+									"name": "Get Outlets by Business",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/outlets/businesses/2ffd7669-7edd-4921-bad5-9fadfd9a50fd"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "684"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2ac-+tDplud8BNr/D13JGlrJdSMNN+U\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 10:05:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"name\": \"Central Hub\",\n            \"address\": \"555 Central Ave, Downtown\",\n            \"phone\": \"+1122334455\",\n            \"email\": \"central@hubstore.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Sales Manager\",\n                    \"value\": \"Jane Smith\"\n                },\n                {\n                    \"name\": \"Support Email\",\n                    \"value\": \"support@hubstore.com\"\n                },\n                {\n                    \"name\": \"Emergency Line\",\n                    \"value\": \"+6677889900\"\n                }\n            ],\n            \"status\": \"active\",\n            \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n            \"description\": \"The flagship store serving central customers.\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n            \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n        }\n    ],\n    \"totalItems\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"itemsPerPage\": 20\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Outlets By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/outlets/def55084-243e-4712-b5c3-23025c0ce28f"
+							},
+							"response": [
+								{
+									"name": "Get Outlets By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/outlets/def55084-243e-4712-b5c3-23025c0ce28f"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1320"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"528-5ToDv4Wl7E6jNENQiKgH40YTXeg\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 10:07:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"outlet\": {\n            \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"name\": \"Central Hub\",\n            \"address\": \"555 Central Ave, Downtown\",\n            \"phone\": \"+1122334455\",\n            \"email\": \"central@hubstore.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Sales Manager\",\n                    \"value\": \"Jane Smith\"\n                },\n                {\n                    \"name\": \"Support Email\",\n                    \"value\": \"support@hubstore.com\"\n                },\n                {\n                    \"name\": \"Emergency Line\",\n                    \"value\": \"+6677889900\"\n                }\n            ],\n            \"status\": \"active\",\n            \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n            \"description\": \"The flagship store serving central customers.\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n            \"updatedAt\": \"2025-07-14T08:52:42.152Z\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"users\": [],\n            \"products\": []\n        }\n    }\n}"
+								},
+								{
+									"name": "Get Outlets By Business Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/outlets/def55084-243e-4712-b5c3-23025c0ce28f"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1792"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"700-fyA6QoVQ5SGw8F0Olx4QlBk0cVU\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 11:58:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"outlet\": {\n            \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"name\": \"Central Hub\",\n            \"address\": \"555 Central Ave, Downtown\",\n            \"phone\": \"+1122334455\",\n            \"email\": \"central@hubstore.com\",\n            \"contact\": [\n                {\n                    \"name\": \"Sales Manager\",\n                    \"value\": \"Jane Smith\"\n                },\n                {\n                    \"name\": \"Support Email\",\n                    \"value\": \"support@hubstore.com\"\n                },\n                {\n                    \"name\": \"Emergency Line\",\n                    \"value\": \"+6677889900\"\n                }\n            ],\n            \"status\": \"active\",\n            \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n            \"description\": \"The flagship store serving central customers.\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n            \"updatedAt\": \"2025-07-14T08:52:42.152Z\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"users\": [\n                {\n                    \"id\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n                    \"firstName\": \"Ibrahim\",\n                    \"lastName\": \"Sulayman\",\n                    \"email\": \"sulaymanibrahim24@fuselabs.io\",\n                    \"phone\": \"+2349057528002\",\n                    \"password\": \"$2b$10$mdsnLFROYvrzoW9aYUCf1ebjCNeI16dhuwwKy1d617wXT0EGywsHm\",\n                    \"userType\": \"store_executive\",\n                    \"status\": \"active\",\n                    \"lastLogin\": null,\n                    \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                    \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                    \"createdAt\": \"2025-07-14T10:40:31.298Z\",\n                    \"updatedAt\": \"2025-07-14T10:40:31.298Z\"\n                }\n            ],\n            \"products\": []\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Add user to store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userData\": {\r\n        \"email\": \"sulaymanibrahim24@fuselabs.io\",\r\n        \"password\": \"brobot123\",\r\n        \"firstName\": \"Ibrahim\",\r\n        \"lastName\": \"Sulayman\",\r\n        \"phone\": \"+2349057528002\"\r\n    },\r\n    \"userType\": \"store_executive\",\r\n    \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\r\n    \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/users/"
+							},
+							"response": [
+								{
+									"name": "Add users to store",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userData\": {\r\n        \"email\": \"sulaymanibrahim24@fuselabs.io\",\r\n        \"password\": \"brobot123\",\r\n        \"firstName\": \"Ibrahim\",\r\n        \"lastName\": \"Sulayman\",\r\n        \"phone\": \"+2349057528002\"\r\n    },\r\n    \"userType\": \"store_executive\",\r\n    \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\r\n    \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/users/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1775"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6ef-98zJukWq2h+V/tyzP7OSLzMSFQY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 11:40:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"user\": {\n            \"firstName\": \"Ibrahim\",\n            \"lastName\": \"Sulayman\",\n            \"email\": \"sulaymanibrahim24@fuselabs.io\",\n            \"phone\": \"+2349057528002\",\n            \"password\": \"$2b$10$mdsnLFROYvrzoW9aYUCf1ebjCNeI16dhuwwKy1d617wXT0EGywsHm\",\n            \"userType\": \"store_executive\",\n            \"status\": \"active\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"lastLogin\": null,\n            \"id\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"createdAt\": \"2025-07-14T10:40:31.298Z\",\n            \"updatedAt\": \"2025-07-14T10:40:31.298Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/users/"
+							},
+							"response": [
+								{
+									"name": "Get Users",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/users/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "619"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"26b-bhWGJ+nHvrRxIc9uVYOsjzQpK7I\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 12:01:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"firstName\": \"Ibrahim\",\n            \"lastName\": \"Sulayman\",\n            \"email\": \"sulaymanibrahim24@fuselabs.io\",\n            \"phone\": \"+2349057528002\",\n            \"userType\": \"store_executive\",\n            \"status\": \"active\",\n            \"lastLogin\": null,\n            \"createdAt\": \"2025-07-14T10:40:31.298Z\"\n        },\n        {\n            \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"firstName\": \"Ibrahim\",\n            \"lastName\": \"Sulayman\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"phone\": \"+2348130388321\",\n            \"userType\": \"owner\",\n            \"status\": \"active\",\n            \"lastLogin\": \"2025-07-14T11:57:45.809Z\",\n            \"createdAt\": \"2025-07-11T20:59:05.407Z\"\n        }\n    ],\n    \"totalItems\": 2,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"itemsPerPage\": 20\n}"
+								}
+							]
+						},
+						{
+							"name": "Get users by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/users/6a09da2b-74a2-4275-9b03-d247d8b7cce0"
+							},
+							"response": [
+								{
+									"name": "Get users by Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/users/6a09da2b-74a2-4275-9b03-d247d8b7cce0"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1622"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"656-Zh8QGx/TkpnOrczUgMmPCoypVkw\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 13:18:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"firstName\": \"Musteezy\",\n            \"lastName\": \"Brobobty\",\n            \"email\": \"sulaymanibrahim24@fuselabs.io\",\n            \"phone\": \"+2349057528002\",\n            \"userType\": \"store_executive\",\n            \"status\": \"active\",\n            \"lastLogin\": \"2025-07-14T12:02:55.110Z\",\n            \"createdAt\": \"2025-07-14T10:40:31.298Z\",\n            \"updatedAt\": \"2025-07-14T11:27:25.153Z\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Edit User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Musteezy\",\r\n    \"lastName\": \"Brobobty\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/users/6a09da2b-74a2-4275-9b03-d247d8b7cce0"
+							},
+							"response": [
+								{
+									"name": "Edit User",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Musteezy\",\r\n    \"lastName\": \"Brobobty\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/users/6a09da2b-74a2-4275-9b03-d247d8b7cce0"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1798"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"706-06DhakenoyJPWamw7AtiPh9Jo3Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 14 Jul 2025 12:27:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"firstName\": \"Musteezy\",\n            \"lastName\": \"Brobobty\",\n            \"email\": \"sulaymanibrahim24@fuselabs.io\",\n            \"phone\": \"+2349057528002\",\n            \"password\": \"$2b$10$mdsnLFROYvrzoW9aYUCf1ebjCNeI16dhuwwKy1d617wXT0EGywsHm\",\n            \"userType\": \"store_executive\",\n            \"status\": \"active\",\n            \"lastLogin\": \"2025-07-14T12:02:55.110Z\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"createdAt\": \"2025-07-14T10:40:31.298Z\",\n            \"updatedAt\": \"2025-07-14T11:27:25.153Z\",\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            }\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Noise Cancelling Headphones\",\r\n    \"description\": \"Over-ear headphones with active noise cancellation\",\r\n    \"price\": 199.99,\r\n    \"quantity\": 40,\r\n    \"category\": \"Electronics\",\r\n    \"tags\": [\"headphones\", \"noise cancelling\"],\r\n    \"imageUrl\": \"https://example.com/images/noise-cancelling-headphones.jpg\",\r\n    \"minPrice\": 180.00,\r\n    \"skuNumber\": \"NCH-2025\",\r\n    \"reOrderPoint\": 10\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/products/outlets/def55084-243e-4712-b5c3-23025c0ce28f/products"
+							},
+							"response": [
+								{
+									"name": "Add Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Noise Cancelling Headphones\",\r\n    \"description\": \"Over-ear headphones with active noise cancellation\",\r\n    \"price\": 199.99,\r\n    \"quantity\": 40,\r\n    \"category\": \"Electronics\",\r\n    \"tags\": [\"headphones\", \"noise cancelling\"],\r\n    \"imageUrl\": \"https://example.com/images/noise-cancelling-headphones.jpg\",\r\n    \"minPrice\": 180.00,\r\n    \"skuNumber\": \"NCH-2025\",\r\n    \"reOrderPoint\": 10\r\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/products/outlets/def55084-243e-4712-b5c3-23025c0ce28f/products"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2545"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"9f1-fnnQK9idXwkaPXlXi0qxGI0NcUg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 16 Jul 2025 13:16:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"product\": {\n            \"name\": \"Noise Cancelling Headphones\",\n            \"description\": \"Over-ear headphones with active noise cancellation\",\n            \"price\": 199.99,\n            \"quantity\": 40,\n            \"category\": \"Electronics\",\n            \"tags\": [\n                \"headphones\",\n                \"noise cancelling\"\n            ],\n            \"imageUrl\": \"https://example.com/images/noise-cancelling-headphones.jpg\",\n            \"minPrice\": 180,\n            \"skuNumber\": \"NCH-2025\",\n            \"status\": \"available\",\n            \"reOrderPoint\": 10,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\",\n                \"business\": {\n                    \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                    \"name\": \"FuseLabs.IO Dev\",\n                    \"yearOfEstablishment\": 2024,\n                    \"category\": \"Software Development\",\n                    \"description\": \"Curating advanced and improved Software for Organizations\",\n                    \"address\": \"9 Maitama Crescent, Abuja\",\n                    \"email\": \"ibrahimsulayman55@gmail.com\",\n                    \"contact\": [\n                        {\n                            \"name\": \"Customer Care\",\n                            \"value\": \"+2348012345678\"\n                        },\n                        {\n                            \"name\": \"Instagram\",\n                            \"value\": \"@bellchow.id.ng\"\n                        }\n                    ],\n                    \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                    \"nextSubRenewal\": null,\n                    \"activeSubStatus\": false,\n                    \"status\": \"active\",\n                    \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                    \"subscriptionId\": null,\n                    \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                    \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n                }\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            },\n            \"id\": \"176ca172-cb26-42c8-8bc7-f0ddfaed0b7b\",\n            \"createdAt\": \"2025-07-16T12:16:56.724Z\",\n            \"updatedAt\": \"2025-07-16T12:16:56.724Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/products/outlets/"
+							},
+							"response": [
+								{
+									"name": "Get Products",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/products/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "7339"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1cab-enp7wUOn6b5paxR54mAN+/Cxwx0\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 16 Jul 2025 13:34:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"176ca172-cb26-42c8-8bc7-f0ddfaed0b7b\",\n            \"name\": \"Noise Cancelling Headphones\",\n            \"description\": \"Over-ear headphones with active noise cancellation\",\n            \"price\": \"199.99\",\n            \"quantity\": 40,\n            \"category\": \"Electronics\",\n            \"tags\": [\n                \"headphones\",\n                \"noise cancelling\"\n            ],\n            \"imageUrl\": \"https://example.com/images/noise-cancelling-headphones.jpg\",\n            \"minPrice\": \"180.00\",\n            \"skuNumber\": \"NCH-2025\",\n            \"status\": \"available\",\n            \"reOrderPoint\": 10,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T12:16:56.724Z\",\n            \"updatedAt\": \"2025-07-16T12:16:56.724Z\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            }\n        },\n        {\n            \"id\": \"6675469a-f404-4969-b1ab-8ea62c5a381c\",\n            \"name\": \"Standing Desk\",\n            \"description\": \"Height-adjustable standing desk, 48-inch\",\n            \"price\": \"350.00\",\n            \"quantity\": 20,\n            \"category\": \"Office\",\n            \"tags\": [\n                \"desk\",\n                \"standing\"\n            ],\n            \"imageUrl\": \"https://example.com/images/standing-desk.jpg\",\n            \"minPrice\": \"300.00\",\n            \"skuNumber\": \"SD-48-2025\",\n            \"status\": \"available\",\n            \"reOrderPoint\": 5,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T12:13:03.731Z\",\n            \"updatedAt\": \"2025-07-16T12:13:03.731Z\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            }\n        },\n        {\n            \"id\": \"b0418e60-bdee-4693-9eb3-2fd35984e4bf\",\n            \"name\": \"Wireless Mouse\",\n            \"description\": \"Ergonomic wireless mouse with long battery life\",\n            \"price\": \"25.99\",\n            \"quantity\": 120,\n            \"category\": \"Accessories\",\n            \"tags\": [\n                \"mouse\",\n                \"wireless\"\n            ],\n            \"imageUrl\": \"https://example.com/images/wireless-mouse.jpg\",\n            \"minPrice\": \"20.00\",\n            \"skuNumber\": null,\n            \"status\": \"available\",\n            \"reOrderPoint\": 15,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T12:04:38.476Z\",\n            \"updatedAt\": \"2025-07-16T12:04:38.476Z\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            }\n        },\n        {\n            \"id\": \"45f92b52-c01e-4190-911d-5de973aff223\",\n            \"name\": \"MacBook Pro 14-inch\",\n            \"description\": \"Apple M2 Pro, 16GB RAM, 512GB SSD\",\n            \"price\": \"2200.00\",\n            \"quantity\": 15,\n            \"category\": \"Electronics\",\n            \"tags\": [\n                \"laptop\",\n                \"apple\",\n                \"macbook\"\n            ],\n            \"imageUrl\": \"https://example.com/images/macbookpro14.jpg\",\n            \"minPrice\": \"2000.00\",\n            \"skuNumber\": \"MBP-14-M2-2025\",\n            \"status\": \"available\",\n            \"reOrderPoint\": 10,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T11:57:07.753Z\",\n            \"updatedAt\": \"2025-07-16T11:57:07.753Z\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            }\n        }\n    ],\n    \"totalItems\": 4,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"itemsPerPage\": 20\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Products By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/products/b0418e60-bdee-4693-9eb3-2fd35984e4bf"
+							},
+							"response": [
+								{
+									"name": "Get Products By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/products/b0418e60-bdee-4693-9eb3-2fd35984e4bf"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1837"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"72d-ZtfzNDUDEJT56YuOL/xndyrhNoI\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 16 Jul 2025 13:48:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"product\": {\n            \"id\": \"b0418e60-bdee-4693-9eb3-2fd35984e4bf\",\n            \"name\": \"Wireless Mouse\",\n            \"description\": \"Ergonomic wireless mouse with long battery life\",\n            \"price\": \"25.99\",\n            \"quantity\": 120,\n            \"category\": \"Accessories\",\n            \"tags\": [\n                \"mouse\",\n                \"wireless\"\n            ],\n            \"imageUrl\": \"https://example.com/images/wireless-mouse.jpg\",\n            \"minPrice\": \"20.00\",\n            \"skuNumber\": null,\n            \"status\": \"available\",\n            \"reOrderPoint\": 15,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T12:04:38.476Z\",\n            \"updatedAt\": \"2025-07-16T12:04:38.476Z\",\n            \"outlet\": {\n                \"id\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n                \"name\": \"Central Hub\",\n                \"address\": \"555 Central Ave, Downtown\",\n                \"phone\": \"+1122334455\",\n                \"email\": \"central@hubstore.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Sales Manager\",\n                        \"value\": \"Jane Smith\"\n                    },\n                    {\n                        \"name\": \"Support Email\",\n                        \"value\": \"support@hubstore.com\"\n                    },\n                    {\n                        \"name\": \"Emergency Line\",\n                        \"value\": \"+6677889900\"\n                    }\n                ],\n                \"status\": \"active\",\n                \"imageUrl\": \"https://cdn.example.com/images/central-hub.jpg \",\n                \"description\": \"The flagship store serving central customers.\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"createdAt\": \"2025-07-14T08:52:42.152Z\",\n                \"updatedAt\": \"2025-07-14T08:52:42.152Z\"\n            },\n            \"business\": {\n                \"id\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"name\": \"FuseLabs.IO Dev\",\n                \"yearOfEstablishment\": 2024,\n                \"category\": \"Software Development\",\n                \"description\": \"Curating advanced and improved Software for Organizations\",\n                \"address\": \"9 Maitama Crescent, Abuja\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"contact\": [\n                    {\n                        \"name\": \"Customer Care\",\n                        \"value\": \"+2348012345678\"\n                    },\n                    {\n                        \"name\": \"Instagram\",\n                        \"value\": \"@bellchow.id.ng\"\n                    }\n                ],\n                \"imageUrl\": \"https://example.com/images/artify.jpg\",\n                \"nextSubRenewal\": null,\n                \"activeSubStatus\": false,\n                \"status\": \"active\",\n                \"ownerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"subscriptionId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.989Z\",\n                \"updatedAt\": \"2025-07-14T08:42:16.480Z\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Products By Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless Mousey\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/products/b0418e60-bdee-4693-9eb3-2fd35984e4bf"
+							},
+							"response": [
+								{
+									"name": "Update Products By Id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Wireless Mousey\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseLocalUrl}}/api/v1/products/b0418e60-bdee-4693-9eb3-2fd35984e4bf"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "572"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"23c-tg1Bi1lr1M5sqjPfnT2v9qfCokE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 16 Jul 2025 13:52:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"product\": {\n            \"id\": \"b0418e60-bdee-4693-9eb3-2fd35984e4bf\",\n            \"name\": \"Wireless Mousey\",\n            \"description\": \"Ergonomic wireless mouse with long battery life\",\n            \"price\": \"25.99\",\n            \"quantity\": 120,\n            \"category\": \"Accessories\",\n            \"tags\": [\n                \"mouse\",\n                \"wireless\"\n            ],\n            \"imageUrl\": \"https://example.com/images/wireless-mouse.jpg\",\n            \"minPrice\": \"20.00\",\n            \"skuNumber\": null,\n            \"status\": \"available\",\n            \"reOrderPoint\": 15,\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"createdAt\": \"2025-07-16T12:04:38.476Z\",\n            \"updatedAt\": \"2025-07-16T12:52:23.925Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Products By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless Mousey\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/products/6675469a-f404-4969-b1ab-8ea62c5a381c"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Logs",
+					"item": [
+						{
+							"name": "Logs",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "Logs",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseLocalUrl}}/api/v1/logs"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "7822"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1e8e-X0Scra6tH69BT9TrwYMNxR/+GJg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 16 Jul 2025 15:32:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"15c17b41-8834-404c-92a7-d1d8c6f4c63e\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Product\",\n            \"receiverId\": \"6675469a-f404-4969-b1ab-8ea62c5a381c\",\n            \"action\": \"delete\",\n            \"description\": \"Deleted product: Standing Desk\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-16T14:27:40.284Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"4273443e-a205-437c-86df-13b8be02066e\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Product\",\n            \"receiverId\": \"b0418e60-bdee-4693-9eb3-2fd35984e4bf\",\n            \"action\": \"update\",\n            \"description\": \"Updated product: Wireless Mousey\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-16T12:52:27.760Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"1667387a-949b-474e-aa60-5f3045743418\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Product\",\n            \"receiverId\": \"b0418e60-bdee-4693-9eb3-2fd35984e4bf\",\n            \"action\": \"update\",\n            \"description\": \"Updated product: Wireless Mouse\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-16T12:52:13.008Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"60350afb-082a-416e-a0bd-99576d50c297\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Product\",\n            \"receiverId\": \"176ca172-cb26-42c8-8bc7-f0ddfaed0b7b\",\n            \"action\": \"create\",\n            \"description\": \"Created new product: Noise Cancelling Headphones in outlet def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-16T12:16:58.550Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"1bc662a5-7f03-4541-b56d-6f9f01056078\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"User\",\n            \"receiverId\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"action\": \"update\",\n            \"description\": \"Updated user: sulaymanibrahim24@fuselabs.io (store_executive)\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-16T11:27:28.309Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"2470e8dc-a89e-4b28-a8c0-dc9e3195080d\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"User\",\n            \"receiverId\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"action\": \"update\",\n            \"description\": \"Updated user: sulaymanibrahim24@fuselabs.io (store_executive)\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-14T11:27:27.048Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"51bd8ef6-b632-4cec-8e71-b87ae915bbc7\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"User\",\n            \"receiverId\": \"6a09da2b-74a2-4275-9b03-d247d8b7cce0\",\n            \"action\": \"create\",\n            \"description\": \"Created new user: sulaymanibrahim24@fuselabs.io (store_executive)\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"timestamp\": \"2025-07-14T10:40:34.494Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"373c0962-9ff1-459d-8778-944e403cb44b\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Outlet\",\n            \"receiverId\": \"def55084-243e-4712-b5c3-23025c0ce28f\",\n            \"action\": \"create\",\n            \"description\": \"Created new outlet: Central Hub for business 2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": null,\n            \"timestamp\": \"2025-07-14T08:52:43.583Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        },\n        {\n            \"id\": \"f28021af-6156-42f2-92df-13394e59b406\",\n            \"performerId\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"receiverType\": \"Business\",\n            \"receiverId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"action\": \"update\",\n            \"description\": \"Updated business: FuseLabs.IO Dev\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": null,\n            \"timestamp\": \"2025-07-14T08:42:18.844Z\",\n            \"performer\": {\n                \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n                \"firstName\": \"Ibrahim\",\n                \"lastName\": \"Sulayman\",\n                \"email\": \"ibrahimsulayman55@gmail.com\",\n                \"phone\": \"+2348130388321\",\n                \"password\": \"$2b$10$YLKfmNzG2Rce/tXu.WUXj.WsO02x1V/GqSjDRkaDTW3RajgeHObee\",\n                \"userType\": \"owner\",\n                \"status\": \"active\",\n                \"lastLogin\": \"2025-07-16T15:27:24.020Z\",\n                \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n                \"outletId\": null,\n                \"createdAt\": \"2025-07-11T20:59:05.407Z\",\n                \"updatedAt\": \"2025-07-16T14:27:24.384Z\"\n            }\n        }\n    ],\n    \"totalItems\": 9,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"itemsPerPage\": 20\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "RegisterOwner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userData\": {\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"password\": \"brobot123\",\r\n    \"firstName\": \"Ibrahim\",\r\n    \"lastName\": \"Sulayman\",\r\n    \"phone\": \"+2348130388321\"\r\n  },\r\n  \"businessData\": {\r\n    \"name\": \"FuseLabs.IO\",\r\n    \"category\": \"Software Development\",\r\n    \"address\": \"9 Maitama Crescent, Abuja\",\r\n    \"yearOfEstablishment\": 2025,\r\n    \"imageUrl\": \"https://example.com/images/artify.jpg\",\r\n    \"description\": \"Curating advanced and improved Software for Organizations\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"contact\": [\r\n      { \"name\": \"Customer Care\", \"value\": \"+2348012345678\" }\r\n    ]\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseLocalUrl}}/api/v1/auth/signup"
+					},
+					"response": [
+						{
+							"name": "RegisterOwner",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userData\": {\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"password\": \"brobot123\",\r\n    \"firstName\": \"Ibrahim\",\r\n    \"lastName\": \"Sulayman\",\r\n    \"phone\": \"+2348130388321\"\r\n  },\r\n  \"businessData\": {\r\n    \"name\": \"FuseLabs.IO\",\r\n    \"category\": \"Software Development\",\r\n    \"address\": \"9 Maitama Crescent, Abuja\",\r\n    \"yearOfEstablishment\": 2025,\r\n    \"imageUrl\": \"https://example.com/images/artify.jpg\",\r\n    \"description\": \"Curating advanced and improved Software for Organizations\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"contact\": [\r\n      { \"name\": \"Customer Care\", \"value\": \"+2348012345678\" }\r\n    ]\r\n  }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/auth/signup"
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "352"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"160-YxHIEEUdR/hKtAdGc3VgGmt9/rs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 21:42:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Registration initiated. OTP sent to your email/phone for verification.\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"858bd61f-f7ae-484c-9197-5c8ea5d3489d\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"userType\": \"owner\",\n            \"status\": \"inactive\"\n        },\n        \"business\": {\n            \"id\": \"c7cad3dc-3fd1-4788-a670-f9c3600b3525\",\n            \"name\": \"FuseLabs.IO\",\n            \"status\": \"pending_verification\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"otp\": \"763073\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseLocalUrl}}/api/v1/auth/verify-signup"
+					},
+					"response": [
+						{
+							"name": "Verify User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"otp\": \"195349\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/auth/verify-signup"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljMWVmZGIxLTAyZmYtNDUyNS05M2Y4LTg5NjQ0NjQ3YjljYyIsImVtYWlsIjoiaWJyYWhpbXN1bGF5bWFuNTVAZ21haWwuY29tIiwidXNlclR5cGUiOiJvd25lciIsImJ1c2luZXNzSWQiOiIyZmZkNzY2OS03ZWRkLTQ5MjEtYmFkNS05ZmFkZmQ5YTUwZmQiLCJpYXQiOjE3NTIyNzEyMDcsImV4cCI6MTc1MjI3NDgwN30.0hVU8arG2cJwwkslUkqzxsGq8t-azOD7BDf-OXfFG_s; Path=/; Expires=Sat, 12 Jul 2025 22:00:07 GMT; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "612"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"264-M0x2l/zTEPivbqsj+vFCOyx4Fmo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 22:00:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljMWVmZGIxLTAyZmYtNDUyNS05M2Y4LTg5NjQ0NjQ3YjljYyIsImVtYWlsIjoiaWJyYWhpbXN1bGF5bWFuNTVAZ21haWwuY29tIiwidXNlclR5cGUiOiJvd25lciIsImJ1c2luZXNzSWQiOiIyZmZkNzY2OS03ZWRkLTQ5MjEtYmFkNS05ZmFkZmQ5YTUwZmQiLCJpYXQiOjE3NTIyNzEyMDcsImV4cCI6MTc1MjI3NDgwN30.0hVU8arG2cJwwkslUkqzxsGq8t-azOD7BDf-OXfFG_s\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"firstName\": \"Ibrahim\",\n            \"lastName\": \"Sulayman\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"userType\": \"owner\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": null,\n            \"status\": \"active\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"password\": \"brobot123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseLocalUrl}}/api/v1/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ibrahimsulayman55@gmail.com\",\r\n    \"password\": \"brobot123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseLocalUrl}}/api/v1/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljMWVmZGIxLTAyZmYtNDUyNS05M2Y4LTg5NjQ0NjQ3YjljYyIsImVtYWlsIjoiaWJyYWhpbXN1bGF5bWFuNTVAZ21haWwuY29tIiwidXNlclR5cGUiOiJvd25lciIsImJ1c2luZXNzSWQiOiIyZmZkNzY2OS03ZWRkLTQ5MjEtYmFkNS05ZmFkZmQ5YTUwZmQiLCJvdXRsZXRJZCI6bnVsbCwiaWF0IjoxNzUyMzMyOTkwLCJleHAiOjE3NTIzMzY1OTB9.4adFjh1BtXGRBKQIBWoxjsVIsn_-eBn8LTW4rkvlRqM; Path=/; Expires=Sun, 13 Jul 2025 15:09:50 GMT; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "633"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"279-m72vbaaKiOnyom5xiiQOa9sBJB4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Jul 2025 15:09:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljMWVmZGIxLTAyZmYtNDUyNS05M2Y4LTg5NjQ0NjQ3YjljYyIsImVtYWlsIjoiaWJyYWhpbXN1bGF5bWFuNTVAZ21haWwuY29tIiwidXNlclR5cGUiOiJvd25lciIsImJ1c2luZXNzSWQiOiIyZmZkNzY2OS03ZWRkLTQ5MjEtYmFkNS05ZmFkZmQ5YTUwZmQiLCJvdXRsZXRJZCI6bnVsbCwiaWF0IjoxNzUyMzMyOTkwLCJleHAiOjE3NTIzMzY1OTB9.4adFjh1BtXGRBKQIBWoxjsVIsn_-eBn8LTW4rkvlRqM\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"firstName\": \"Ibrahim\",\n            \"lastName\": \"Sulayman\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"userType\": \"owner\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": null,\n            \"status\": \"active\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{baseLocalUrl}}/api/v1/auth/logout"
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/auth/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=loggedout; Path=/; Expires=Sat, 12 Jul 2025 15:12:55 GMT; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-m/mITeO9zyQJZ8vtKvCWsK+B4d4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Jul 2025 15:12:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Me",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseLocalUrl}}/api/v1/auth/me"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-Hri3NFgSN2GO5RRipV7cofr+mC8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Jul 2025 15:14:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"9c1efdb1-02ff-4525-93f8-89644647b9cc\",\n            \"email\": \"ibrahimsulayman55@gmail.com\",\n            \"userType\": \"owner\",\n            \"businessId\": \"2ffd7669-7edd-4921-bad5-9fadfd9a50fd\",\n            \"outletId\": null\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
