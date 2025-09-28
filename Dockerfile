@@ -1,20 +1,23 @@
 # Use Node.js LTS version
 FROM node:18-alpine
 
+# Install yarn globally
+RUN npm install -g yarn
+
 # Set working directory
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN yarn install --production --frozen-lockfile
 
 # Copy application files
 COPY . .
 
 # Create build output
-RUN npm run build
+RUN yarn build
 
 # Expose default port
 EXPOSE 3000
@@ -23,4 +26,4 @@ EXPOSE 3000
 ENV NODE_ENV=production
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
