@@ -1,4 +1,4 @@
-import { LoginResponse } from '../components/responses/';
+import { LoginResponse } from 'docs/components/schemas/success';
 import { RegisterUserSchema } from '../components/schemas/user';
 
 export const authPaths = {

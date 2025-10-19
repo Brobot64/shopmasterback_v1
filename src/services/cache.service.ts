@@ -109,7 +109,7 @@ class CacheService {
 
             if (metaData.compressed === 'true') {
                 const zlib = await import('zlib');
-                serializedValue = zlib.gunzipSync(Buffer.from(value, 'base64')).toString();
+                serializedValue = zlib.gunzipSync(Buffer.from(String(value), 'base64')).toString();
             }
 
             await this.incrementStat('hits');
@@ -140,7 +140,7 @@ class CacheService {
             await redis.del(`${fullKey}:meta`); // Delete metadata if exists
             
             logger.debug(`Cache deleted: ${fullKey}`);
-            return result > 0;
+            return Number(result) > 0;
         } catch (error) {
             logger.error(`Cache delete error for key ${key}:`, error);
             return false;

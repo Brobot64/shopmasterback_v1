@@ -32,6 +32,13 @@ router.get(
     catchAsync(productController.getAllProducts)
 );
 
+router.get(
+    '/outlets/:outletId/products',
+    authorize(UserRole.ADMIN, UserRole.OWNER, UserRole.STORE_EXECUTIVE, UserRole.SALES_REP),
+    cacheMiddleware('products-list'),
+    catchAsync(productController.getProductsByOutlet)
+);
+
 router.put(
     '/:id',
     authorize(UserRole.ADMIN, UserRole.OWNER, UserRole.STORE_EXECUTIVE),

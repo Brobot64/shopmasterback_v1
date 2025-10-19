@@ -36,7 +36,7 @@ class RateLimiter {
                 const key = this.options.keyGenerator!(req);
                 const current = await redis.get(key);
                 
-                if (current && parseInt(current) >= this.options.maxRequests) {
+                if (current && parseInt(current as any) >= this.options.maxRequests) {
                     logger.warn(`Rate limit exceeded for ${req.ip} on ${req.path}`);
                     return next(new ApiError(this.options.message!, 429));
                 }
@@ -50,7 +50,7 @@ class RateLimiter {
                 await multi.exec();
                 
                 // Add rate limit headers
-                const remaining = Math.max(0, this.options.maxRequests - parseInt(current || '0') - 1);
+                const remaining = Math.max(0, this.options.maxRequests - parseInt(current as string || '0') - 1);
                 res.set({
                     'X-RateLimit-Limit': this.options.maxRequests.toString(),
                     'X-RateLimit-Remaining': remaining.toString(),

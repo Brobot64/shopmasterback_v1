@@ -32,7 +32,13 @@ class RedisClient {
       (redisConfig as any).username = process.env.REDIS_USERNAME;
     }
 
-    this.client = createClient(redisConfig);
+    this.client = createClient({
+      ...redisConfig,
+      socket: {
+        ...redisConfig.socket,
+        tls: process.env.REDIS_HOST?.includes('redis-cloud.com') ? true : undefined
+      }
+    });
     this.setupEventListeners();
   }
 

@@ -68,7 +68,7 @@ class OtpService {
             
             if (client) {
                 // Use Redis for verification
-                storedOtp = await client.get(key);
+                storedOtp = await client.get(key) as string;
                 if (storedOtp === otp) {
                     await client.del(key);
                     logger.info(`OTP verified and deleted from Redis for ${email}`);

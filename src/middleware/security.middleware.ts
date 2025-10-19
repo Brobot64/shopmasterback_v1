@@ -349,7 +349,7 @@ export const authRateLimitMiddleware = catchAsync(async (req: Request, res: Resp
         }
 
         // Allow 3 attempts per 15 minutes per IP/email combination
-        if (attempts > 3) {
+        if (attempts as number > 3) {
             const userAgent = req.headers['user-agent'] || 'unknown';
             
             await securityMonitorService.logSecurityEvent({

@@ -43,6 +43,11 @@
     "@types/nodemailer": "^6.4.17",
     "@types/redis": "^4.0.11",
     "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   },
@@ -64,6 +69,11 @@
     "migration:generate": "typeorm-ts-node-commonjs migration:generate src/database/migrations/InitialMigration -d src/database/data-source.ts",
     "migration:run": "typeorm-ts-node-commonjs migration:run -d src/database/data-source.ts",
     "migration:revert": "typeorm-ts-node-commonjs migration:revert -d src/database/data-source.ts",
+    "fix": "npm-run-all --sequential fix:*",
+    "fix:lint": "eslint \"src/**/*.ts\" --fix",
+    "fix:format": "prettier --write \"src/**/*.ts\"",
+    "fix:type": "tsc --noEmit",
+    "fix:audit": "npm audit fix",
     "seed": "ts-node src/database/seed.ts",
     "docker:build": "docker build -t shopmaster-backend .",
     "docker:run": "docker run -p 5000:5000 shopmaster-backend"

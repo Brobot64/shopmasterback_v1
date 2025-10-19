@@ -22,7 +22,7 @@ class NotificationService {
         const key = `rate_limit:${email}`;
         const current = await client.get(key) || "0";
         
-        if (parseInt(current) >= 5) { // Limit to 5 emails per hour
+        if (parseInt(String(current)) >= 5) { // Limit to 5 emails per hour
             return false;
         }
         await client.multi()

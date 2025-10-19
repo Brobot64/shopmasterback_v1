@@ -55,6 +55,30 @@ class ProductService {
         return product;
     }
 
+    async getProductsByOutlet(outletId: string, pagination: PaginationOptions = {}): Promise<PaginatedResult<Product>> {
+        const { page = 1, limit = 20, sortBy = 'createdAt', sortOrder = 'DESC' } = pagination;
+        const offset = (page - 1) * limit;
+
+        const queryBuilder = this.productRepository.createQueryBuilder('product')
+            .leftJoinAndSelect('product.outlet', 'outlet')
+            .leftJoinAndSelect('product.business', 'business')
+            .where('product.outletId = :outletId', { outletId });
+
+        queryBuilder.orderBy(`product.${sortBy}`, sortOrder)
+            .skip(offset)
+            .take(limit);
+
+        const [products, totalItems] = await queryBuilder.getManyAndCount();
+
+        return {
+            data: products,
+            totalItems,
+            totalPages: Math.ceil(totalItems / limit),
+            currentPage: page,
+            itemsPerPage: limit,
+        };
+    }
+
     async getAllProducts(
         requester: { id: string; userType: string; businessId?: string; outletId?: string },
         filters: ProductFilters,

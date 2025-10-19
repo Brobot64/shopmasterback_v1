@@ -44,6 +44,27 @@ class ProductController {
         });
     }
 
+    async getProductsByOutlet(req: Request, res: Response, next: NextFunction) {
+        const outletId = req.params.outletId;
+
+        const pagination = {
+            page: parseInt(req.query.page as string) || 1,
+            limit: parseInt(req.query.limit as string) || 20,
+            sortBy: req.query.sortBy as string || 'createdAt',
+            sortOrder: req.query.sortOrder as 'ASC' | 'DESC' || 'DESC'
+        };
+
+        const result = await productService.getProductsByOutlet(
+            outletId,
+            pagination
+        );
+
+        res.status(200).json({
+            status: 'success',
+            ...result
+        });
+    }
+
     async getAllProducts(req: Request, res: Response, next: NextFunction) {
         const filters = {
             outletId: req.query.outletId as string,
