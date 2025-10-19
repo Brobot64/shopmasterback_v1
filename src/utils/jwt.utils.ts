@@ -40,10 +40,10 @@ const generateToken = (payload: JwtPayload): string => {
         aud: 'shopmaster-client', // Audience
     };
     
-    return jwt.sign(tokenPayload, jwtConfig.secret, { 
+    return jwt.sign(tokenPayload, jwtConfig.secret, {
         expiresIn: jwtConfig.expiresIn,
         algorithm: 'HS256'
-    });
+    } as jwt.SignOptions);
 };
 
 const generateTokenPair = async (payload: Omit<JwtPayload, 'jti' | 'tokenType' | 'iat' | 'exp'>): Promise<TokenPair> => {

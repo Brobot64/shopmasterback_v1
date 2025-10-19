@@ -107,7 +107,7 @@ class CacheService {
             const metaData = await redis.hGetAll(`${fullKey}:meta`);
             let serializedValue = value;
 
-            if (metaData.compressed === 'true') {
+            if (metaData && typeof metaData === 'object' && 'compressed' in metaData && metaData.compressed === 'true') {
                 const zlib = await import('zlib');
                 serializedValue = zlib.gunzipSync(Buffer.from(String(value), 'base64')).toString();
             }
@@ -115,7 +115,7 @@ class CacheService {
             await this.incrementStat('hits');
             logger.debug(`Cache hit: ${fullKey}`);
             
-            return JSON.parse(serializedValue) as T;
+            return JSON.parse(String(serializedValue)) as T;
         } catch (error) {
             logger.warn(`Cache get error for key ${key}, returning null:`, error.message);
             await this.incrementStat('misses').catch(() => {});
@@ -181,7 +181,7 @@ class CacheService {
             for (let i = 0; i < values.length; i++) {
                 if (values[i]) {
                     try {
-                        results.push(JSON.parse(values[i]!) as T);
+                        results.push(JSON.parse(String(values[i])) as T);
                         await this.incrementStat('hits');
                     } catch (error) {
                         results.push(null);
@@ -238,7 +238,8 @@ class CacheService {
             const redis = await redisClient.getClient();
             const keys = await redis.sMembers(`tag:${tag}`);
             
-            if (keys.length === 0) return 0;
+            if (Array.isArray(keys) && keys.length === 0) return 0;
+            if (!Array.isArray(keys)) return 0;
 
             const pipeline = redis.multi();
             keys.forEach(key => {
@@ -249,8 +250,9 @@ class CacheService {
             
             await pipeline.exec();
             
-            logger.info(`Cache invalidated by tag '${tag}': ${keys.length} keys`);
-            return keys.length;
+            const deletedCount = Array.isArray(keys) ? keys.length : 0;
+            logger.info(`Cache invalidated by tag '${tag}': ${deletedCount} keys`);
+            return deletedCount;
         } catch (error) {
             logger.error(`Cache tag invalidation error for tag ${tag}:`, error);
             return 0;
@@ -318,7 +320,8 @@ class CacheService {
         try {
             const redis = await redisClient.getClient();
             const fullKey = prefix ? `${prefix}:${key}` : key;
-            return await redis.incrBy(fullKey, increment);
+            const result = await redis.incrBy(fullKey, increment);
+            return typeof result === 'number' ? result : parseInt(String(result), 10);
         } catch (error) {
             logger.error(`Cache increment error for key ${key}:`, error);
             return 0;
@@ -360,8 +363,8 @@ class CacheService {
                 const fullKey = prefix ? `${prefix}:${key}` : key;
                 const metaData = await redis.hGetAll(`${fullKey}:meta`);
                 
-                if (metaData.sliding_ttl) {
-                    const slidingTTL = parseInt(metaData.sliding_ttl, 10);
+                if (metaData && typeof metaData === 'object' && 'sliding_ttl' in metaData && metaData.sliding_ttl) {
+                    const slidingTTL = parseInt(String(metaData.sliding_ttl), 10);
                     await redis.expire(fullKey, slidingTTL);
                     await redis.expire(`${fullKey}:meta`, slidingTTL);
                 }
@@ -380,19 +383,19 @@ class CacheService {
         try {
             const redis = await redisClient.getClient();
             const [hits, misses, keyCount, info] = await Promise.all([
-                redis.get('cache:stats:hits').then(v => parseInt(v || '0', 10)),
-                redis.get('cache:stats:misses').then(v => parseInt(v || '0', 10)),
+                redis.get('cache:stats:hits').then(v => parseInt(String(v || '0'), 10)),
+                redis.get('cache:stats:misses').then(v => parseInt(String(v || '0'), 10)),
                 redis.dbSize(),
                 redis.info('memory')
             ]);
 
-            const memoryMatch = info.match(/used_memory_human:(.+)/);
+            const memoryMatch = String(info).match(/used_memory_human:(.+)/);
             const memory = memoryMatch ? memoryMatch[1].trim() : 'unknown';
 
             return {
                 hits,
                 misses,
-                keys: keyCount,
+                keys: typeof keyCount === 'number' ? keyCount : parseInt(String(keyCount), 10),
                 memory
             };
         } catch (error) {
@@ -451,7 +454,7 @@ class CacheService {
     private async initializeStats(): Promise<void> {
         try {
             const redis = await redisClient.getClient();
-            const exists = await redis.exists('cache:stats:hits', 'cache:stats:misses');
+            const exists = await redis.exists(['cache:stats:hits', 'cache:stats:misses']);
             
             if (exists === 0) {
                 await redis.mSet({

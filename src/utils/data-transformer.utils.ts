@@ -72,7 +72,7 @@ export const transformBusinessData = (business: Business, includeSensitive = fal
         id: business.id,
         name: business.name,
         description: business.description,
-        industry: business.industry,
+        category: business.category, // 'industry' doesn't exist, using 'category'
         status: business.status,
         createdAt: business.createdAt,
         updatedAt: business.updatedAt,
@@ -80,17 +80,14 @@ export const transformBusinessData = (business: Business, includeSensitive = fal
 
     if (includeSensitive) {
         transformed.email = business.email;
-        transformed.phone = business.phone;
+        transformed.contact = business.contact; // Using 'contact' instead of individual phone/website
         transformed.address = business.address;
-        transformed.website = business.website;
     } else {
         // Mask sensitive information
         if (business.email) {
             transformed.email = maskEmail(business.email);
         }
-        if (business.phone) {
-            transformed.phone = maskPhoneNumber(business.phone);
-        }
+        // Contact info is in JSONB format, skip masking for now
     }
 
     return transformed;
@@ -105,7 +102,7 @@ export const transformProductData = (product: Product, includeInternalData = fal
         name: product.name,
         description: product.description,
         category: product.category,
-        barcode: product.barcode,
+        skuNumber: product.skuNumber, // Using 'skuNumber' instead of 'barcode'
         status: product.status,
         createdAt: product.createdAt,
         updatedAt: product.updatedAt,
@@ -113,15 +110,14 @@ export const transformProductData = (product: Product, includeInternalData = fal
 
     // Include pricing and inventory data only for authorized users
     if (includeInternalData) {
-        transformed.costPrice = product.costPrice;
-        transformed.sellingPrice = product.sellingPrice;
-        transformed.margin = product.margin;
-        transformed.taxRate = product.taxRate;
-        transformed.minimumStock = product.minimumStock;
+        transformed.price = product.price; // Using actual property names from entity
+        transformed.minPrice = product.minPrice;
+        transformed.quantity = product.quantity;
+        transformed.reOrderPoint = product.reOrderPoint;
         transformed.businessId = product.businessId;
     } else {
         // Only include selling price for external views
-        transformed.sellingPrice = product.sellingPrice;
+        transformed.price = product.price;
     }
 
     return transformed;
@@ -133,21 +129,19 @@ export const transformProductData = (product: Product, includeInternalData = fal
 export const transformSalesData = (sales: Sales, requestingUserRole?: UserRole): TransformedData => {
     const transformed: TransformedData = {
         id: sales.id,
-        saleDate: sales.saleDate,
+        createdAt: sales.createdAt, // Using createdAt instead of saleDate
         totalAmount: sales.totalAmount,
         status: sales.status,
-        createdAt: sales.createdAt,
     };
 
     // Include detailed information for authorized roles
     if (requestingUserRole && [UserRole.ADMIN, UserRole.OWNER, UserRole.STORE_EXECUTIVE].includes(requestingUserRole)) {
-        transformed.subtotal = sales.subtotal;
-        transformed.tax = sales.tax;
         transformed.discount = sales.discount;
-        transformed.paymentMethod = sales.paymentMethod;
-        transformed.notes = sales.notes;
-        transformed.businessId = sales.businessId;
-        transformed.outletId = sales.outletId;
+        transformed.paymentChannel = sales.paymentChannel; // Using actual property name
+        transformed.amountPaid = sales.amountPaid;
+        transformed.remainingToPay = sales.remainingToPay;
+        transformed.customer = sales.customer;
+        transformed.salesPersonId = sales.salesPersonId;
         
         if (sales.salesPerson) {
             transformed.salesPerson = transformUserData(sales.salesPerson);
@@ -163,11 +157,11 @@ export const transformSalesData = (sales: Sales, requestingUserRole?: UserRole):
 export const transformInventoryData = (inventory: Inventory): TransformedData => {
     return {
         id: inventory.id,
-        quantity: inventory.quantity,
-        lastRestockDate: inventory.lastRestockDate,
-        nextRestockDate: inventory.nextRestockDate,
-        productId: inventory.productId,
+        products: inventory.products, // This is a JSONB array of products
+        status: inventory.status,
         outletId: inventory.outletId,
+        actionerId: inventory.actionerId,
+        createdAt: inventory.createdAt,
         updatedAt: inventory.updatedAt,
     };
 };

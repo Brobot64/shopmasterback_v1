@@ -326,15 +326,21 @@ class DatabaseOptimizationService {
 
             for (const index of indexes) {
                 try {
-                    const indexExists = await queryRunner.hasIndex(index.table, index.name);
+                    // Check if index exists by querying database directly
+                    const indexCheckQuery = `
+                        SELECT indexname FROM pg_indexes 
+                        WHERE tablename = $1 AND indexname = $2
+                    `;
+                    const indexResult = await queryRunner.query(indexCheckQuery, [index.table, index.name]);
+                    const indexExists = indexResult.length > 0;
+                    
                     if (!indexExists) {
-                        await queryRunner.createIndex(
-                            index.table,
-                            new (await import('typeorm')).Index({
-                                name: index.name,
-                                columnNames: index.columns,
-                            })
-                        );
+                        // Create index using direct SQL query instead of TypeORM Index class
+                        const indexQuery = `
+                            CREATE INDEX IF NOT EXISTS "${index.name}" 
+                            ON "${index.table}" (${index.columns.map(col => `"${col}"`).join(', ')})
+                        `;
+                        await queryRunner.query(indexQuery);
                         logger.info(`Created index: ${index.name} on ${index.table}`);
                     }
                 } catch (error) {

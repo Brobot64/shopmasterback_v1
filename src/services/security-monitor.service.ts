@@ -138,7 +138,7 @@ class SecurityMonitorService {
             });
 
             // Check if threshold exceeded
-            if (failedCount >= this.FAILED_LOGIN_THRESHOLD) {
+            if (typeof failedCount === 'number' && failedCount >= this.FAILED_LOGIN_THRESHOLD) {
                 await this.logSecurityEvent({
                     type: SecurityEventType.LOGIN_BRUTE_FORCE,
                     severity: 'high',
@@ -173,7 +173,7 @@ class SecurityMonitorService {
             const requestCount = await redis.incr(requestKey);
             await redis.expire(requestKey, Math.ceil(this.HIGH_REQUEST_WINDOW / 1000));
 
-            if (requestCount > this.HIGH_REQUEST_THRESHOLD) {
+            if (typeof requestCount === 'number' && requestCount > this.HIGH_REQUEST_THRESHOLD) {
                 await this.logSecurityEvent({
                     type: SecurityEventType.HIGH_REQUEST_VOLUME,
                     severity: 'high',
@@ -390,7 +390,7 @@ class SecurityMonitorService {
             for (const key of eventKeys.slice(0, limit)) {
                 const eventData = await redis.get(key);
                 if (eventData) {
-                    const event = JSON.parse(eventData);
+                    const event = JSON.parse(String(eventData));
                     
                     // Apply filters
                     if (filters.type && event.type !== filters.type) continue;
@@ -438,7 +438,7 @@ class SecurityMonitorService {
             for (const key of eventKeys) {
                 const eventData = await redis.get(key);
                 if (eventData) {
-                    const event = JSON.parse(eventData);
+                    const event = JSON.parse(String(eventData));
                     
                     eventsByType[event.type] = (eventsByType[event.type] || 0) + 1;
                     eventsBySeverity[event.severity] = (eventsBySeverity[event.severity] || 0) + 1;
@@ -484,7 +484,7 @@ class SecurityMonitorService {
             for (const key of eventKeys) {
                 const eventData = await redis.get(key);
                 if (eventData) {
-                    const event = JSON.parse(eventData);
+                    const event = JSON.parse(String(eventData));
                     if (new Date(event.timestamp).getTime() < cutoffDate) {
                         await redis.del(key);
                         deletedCount++;

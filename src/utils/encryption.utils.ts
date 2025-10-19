@@ -33,8 +33,7 @@ class EncryptionService {
     encrypt(data: string): string {
         try {
             const iv = crypto.randomBytes(IV_LENGTH);
-            const cipher = crypto.createCipher(ALGORITHM, this.encryptionKey);
-            cipher.setIV(iv);
+            const cipher = crypto.createCipheriv(ALGORITHM, this.encryptionKey, iv);
             
             let encrypted = cipher.update(data, 'utf8', 'hex');
             encrypted += cipher.final('hex');
@@ -60,8 +59,7 @@ class EncryptionService {
             const tag = Buffer.from(encryptedData.slice(IV_LENGTH * 2, (IV_LENGTH + TAG_LENGTH) * 2), 'hex');
             const encrypted = encryptedData.slice((IV_LENGTH + TAG_LENGTH) * 2);
             
-            const decipher = crypto.createDecipher(ALGORITHM, this.encryptionKey);
-            decipher.setIV(iv);
+            const decipher = crypto.createDecipheriv(ALGORITHM, this.encryptionKey, iv);
             decipher.setAuthTag(tag);
             
             let decrypted = decipher.update(encrypted, 'hex', 'utf8');
